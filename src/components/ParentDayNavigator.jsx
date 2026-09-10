@@ -49,7 +49,7 @@ export default function ParentDayNavigator() {
     preloadImage.src = floorById[destinationFloorId].image
   }, [navigation])
 
-  if (!navigation) return <main className="parent-home"><section className="home-card" aria-labelledby="home-title"><p className="eyebrow">校園家長日</p><h1 id="home-title">家長日校園導航</h1><p className="home-copy">輸入班級，立即查看前往路線</p><form className="class-search" onSubmit={startNavigation}><label htmlFor="class-number">請輸入您要前往的班級</label><input autoComplete="off" id="class-number" inputMode="numeric" onChange={(event) => setInput(event.target.value)} placeholder="例如：703、811、916" type="text" value={input} /><button type="submit">開始導航</button></form>{message && <p aria-live="polite" className="search-message">{message}</p>}</section></main>
+  if (!navigation) return <main className="parent-home"><section className="home-card" aria-labelledby="home-title"><p className="eyebrow">新北市義學國民中學</p><h1 id="home-title">家長日校園導航</h1><p className="home-copy">輸入班級，立即查看前往路線</p><form className="class-search" onSubmit={startNavigation}><label htmlFor="class-number">請輸入您要前往的班級</label><input autoComplete="off" id="class-number" inputMode="numeric" onChange={(event) => setInput(event.target.value)} placeholder="例如：703、811、901" type="text" value={input} /><button type="submit">開始導航</button></form>{message && <p aria-live="polite" className="search-message">{message}</p>}</section></main>
 
   const route = routes.find((item) => item.id === navigation.routeId)
   const destination = destinationById[navigation.destinationId]
