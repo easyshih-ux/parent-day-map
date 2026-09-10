@@ -1,0 +1,1525 @@
+{
+  "slideSize": {
+    "width": 12192000,
+    "height": 6858000,
+    "unit": "EMU"
+  },
+  "mapSize": {
+    "width": 1672,
+    "height": 941
+  },
+  "slides": [
+    {
+      "slide": 1,
+      "file": "ppt/slides/slide1.xml",
+      "groupCount": 5,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 38",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              5026613
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              689.712
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 40",
+          "ppt": {
+            "start": [
+              5829340,
+              4661207
+            ],
+            "end": [
+              8418188,
+              5006859
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              799.43,
+              639.574
+            ],
+            "end": [
+              1154.463,
+              687.001
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 42",
+          "ppt": {
+            "start": [
+              4901530,
+              2595671
+            ],
+            "end": [
+              5813259,
+              4641453
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              672.191,
+              356.157
+            ],
+            "end": [
+              797.225,
+              636.863
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 3,
+          "name": "直線接點 53",
+          "ppt": {
+            "start": [
+              4665388,
+              2602658
+            ],
+            "end": [
+              4893415,
+              2595671
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              639.807,
+              357.116
+            ],
+            "end": [
+              671.079,
+              356.157
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 4,
+          "name": "直線接點 59",
+          "ppt": {
+            "start": [
+              4665388,
+              2595671
+            ],
+            "end": [
+              4665388,
+              2195749
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              639.807,
+              356.157
+            ],
+            "end": [
+              639.807,
+              301.283
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        }
+      ]
+    },
+    {
+      "slide": 2,
+      "file": "ppt/slides/slide2.xml",
+      "groupCount": 5,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 49",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              3021874
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              414.637
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 54",
+          "ppt": {
+            "start": [
+              8418188,
+              3037485
+            ],
+            "end": [
+              7539562,
+              3037485
+            ],
+            "rotation": 0,
+            "flipH": true,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              1154.463,
+              416.779
+            ],
+            "end": [
+              1033.969,
+              416.779
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 61",
+          "ppt": {
+            "start": [
+              7539562,
+              3021874
+            ],
+            "end": [
+              7539562,
+              2195749
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1033.969,
+              414.637
+            ],
+            "end": [
+              1033.969,
+              301.283
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        }
+      ]
+    },
+    {
+      "slide": 3,
+      "file": "ppt/slides/slide3.xml",
+      "groupCount": 4,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 34",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              5026613
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              689.712
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 35",
+          "ppt": {
+            "start": [
+              5829340,
+              4661207
+            ],
+            "end": [
+              8418188,
+              5006859
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              799.43,
+              639.574
+            ],
+            "end": [
+              1154.463,
+              687.001
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 37",
+          "ppt": {
+            "start": [
+              4901530,
+              2595671
+            ],
+            "end": [
+              5813259,
+              4641453
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              672.191,
+              356.157
+            ],
+            "end": [
+              797.225,
+              636.863
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 3,
+          "name": "直線接點 38",
+          "ppt": {
+            "start": [
+              4077911,
+              2595671
+            ],
+            "end": [
+              4893415,
+              2595671
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              559.241,
+              356.157
+            ],
+            "end": [
+              671.079,
+              356.157
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 4,
+          "name": "直線接點 39",
+          "ppt": {
+            "start": [
+              4077911,
+              2555749
+            ],
+            "end": [
+              4077911,
+              2178728
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              559.241,
+              350.679
+            ],
+            "end": [
+              559.241,
+              298.948
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        }
+      ]
+    },
+    {
+      "slide": 4,
+      "file": "ppt/slides/slide4.xml",
+      "groupCount": 4,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 35",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              5026613
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              689.712
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 38",
+          "ppt": {
+            "start": [
+              5829340,
+              4661207
+            ],
+            "end": [
+              8418188,
+              5006859
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              799.43,
+              639.574
+            ],
+            "end": [
+              1154.463,
+              687.001
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 39",
+          "ppt": {
+            "start": [
+              4901530,
+              2595671
+            ],
+            "end": [
+              5813259,
+              4641453
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              672.191,
+              356.157
+            ],
+            "end": [
+              797.225,
+              636.863
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 3,
+          "name": "直線接點 40",
+          "ppt": {
+            "start": [
+              1365438,
+              2595671
+            ],
+            "end": [
+              4885961,
+              2595671
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              187.255,
+              356.157
+            ],
+            "end": [
+              670.056,
+              356.157
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 4,
+          "name": "直線接點 41",
+          "ppt": {
+            "start": [
+              1365438,
+              2595671
+            ],
+            "end": [
+              1365438,
+              2195749
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              187.255,
+              356.157
+            ],
+            "end": [
+              187.255,
+              301.283
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        }
+      ]
+    },
+    {
+      "slide": 5,
+      "file": "ppt/slides/slide5.xml",
+      "groupCount": 4,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 65",
+          "ppt": {
+            "start": [
+              8418188,
+              3037485
+            ],
+            "end": [
+              7539562,
+              3037485
+            ],
+            "rotation": 0,
+            "flipH": true,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              1154.463,
+              416.779
+            ],
+            "end": [
+              1033.969,
+              416.779
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 66",
+          "ppt": {
+            "start": [
+              7539562,
+              3021874
+            ],
+            "end": [
+              7539562,
+              2195749
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1033.969,
+              414.637
+            ],
+            "end": [
+              1033.969,
+              301.283
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 68",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              3021874
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              414.637
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        }
+      ]
+    },
+    {
+      "slide": 6,
+      "file": "ppt/slides/slide6.xml",
+      "groupCount": 4,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 44",
+          "ppt": {
+            "start": [
+              4085157,
+              2540169
+            ],
+            "end": [
+              4085157,
+              2202767
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              560.235,
+              348.542
+            ],
+            "end": [
+              560.235,
+              302.246
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 63",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              5026613
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              689.712
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 64",
+          "ppt": {
+            "start": [
+              5829340,
+              4661207
+            ],
+            "end": [
+              8418188,
+              5026613
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              799.43,
+              639.574
+            ],
+            "end": [
+              1154.463,
+              689.712
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 3,
+          "name": "直線接點 65",
+          "ppt": {
+            "start": [
+              4901530,
+              2595671
+            ],
+            "end": [
+              5813259,
+              4641453
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              672.191,
+              356.157
+            ],
+            "end": [
+              797.225,
+              636.863
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 4,
+          "name": "直線接點 66",
+          "ppt": {
+            "start": [
+              4085157,
+              2595671
+            ],
+            "end": [
+              4893415,
+              2595671
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              560.235,
+              356.157
+            ],
+            "end": [
+              671.079,
+              356.157
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        }
+      ]
+    },
+    {
+      "slide": 7,
+      "file": "ppt/slides/slide7.xml",
+      "groupCount": 4,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 49",
+          "ppt": {
+            "start": [
+              1349323,
+              2595671
+            ],
+            "end": [
+              1349323,
+              2185630
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              185.045,
+              356.157
+            ],
+            "end": [
+              185.045,
+              299.895
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 65",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              5026613
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              689.712
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 66",
+          "ppt": {
+            "start": [
+              5829340,
+              4661207
+            ],
+            "end": [
+              8418188,
+              5026613
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              799.43,
+              639.574
+            ],
+            "end": [
+              1154.463,
+              689.712
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 3,
+          "name": "直線接點 67",
+          "ppt": {
+            "start": [
+              4901530,
+              2595671
+            ],
+            "end": [
+              5813259,
+              4641453
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              672.191,
+              356.157
+            ],
+            "end": [
+              797.225,
+              636.863
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 4,
+          "name": "直線接點 68",
+          "ppt": {
+            "start": [
+              1349323,
+              2595671
+            ],
+            "end": [
+              4893415,
+              2595671
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              185.045,
+              356.157
+            ],
+            "end": [
+              671.079,
+              356.157
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        }
+      ]
+    },
+    {
+      "slide": 8,
+      "file": "ppt/slides/slide8.xml",
+      "groupCount": 4,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 30",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              2529772
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              347.115
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 31",
+          "ppt": {
+            "start": [
+              8418188,
+              2419177
+            ],
+            "end": [
+              7487425,
+              2419177
+            ],
+            "rotation": 0,
+            "flipH": true,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              1154.463,
+              331.94
+            ],
+            "end": [
+              1026.819,
+              331.94
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 32",
+          "ppt": {
+            "start": [
+              7487425,
+              2419177
+            ],
+            "end": [
+              7487425,
+              2193943
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1026.819,
+              331.94
+            ],
+            "end": [
+              1026.819,
+              301.035
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        }
+      ]
+    },
+    {
+      "slide": 9,
+      "file": "ppt/slides/slide9.xml",
+      "groupCount": 4,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 30",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              2489995
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              341.657
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 31",
+          "ppt": {
+            "start": [
+              8418188,
+              2419177
+            ],
+            "end": [
+              4691974,
+              2419177
+            ],
+            "rotation": 0,
+            "flipH": true,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              1154.463,
+              331.94
+            ],
+            "end": [
+              643.453,
+              331.94
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 32",
+          "ppt": {
+            "start": [
+              4691974,
+              2419177
+            ],
+            "end": [
+              4691974,
+              2193943
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              643.453,
+              331.94
+            ],
+            "end": [
+              643.453,
+              301.035
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        }
+      ]
+    },
+    {
+      "slide": 10,
+      "file": "ppt/slides/slide10.xml",
+      "groupCount": 4,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 23",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              2489995
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              341.657
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 30",
+          "ppt": {
+            "start": [
+              8418188,
+              2419177
+            ],
+            "end": [
+              1987794,
+              2419177
+            ],
+            "rotation": 0,
+            "flipH": true,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              1154.463,
+              331.94
+            ],
+            "end": [
+              272.604,
+              331.94
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 31",
+          "ppt": {
+            "start": [
+              1987794,
+              2432117
+            ],
+            "end": [
+              1987794,
+              2206883
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              272.604,
+              333.716
+            ],
+            "end": [
+              272.604,
+              302.811
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        }
+      ]
+    },
+    {
+      "slide": 11,
+      "file": "ppt/slides/slide11.xml",
+      "groupCount": 4,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 27",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              2529772
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              347.115
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 30",
+          "ppt": {
+            "start": [
+              8418188,
+              2419177
+            ],
+            "end": [
+              7487425,
+              2419177
+            ],
+            "rotation": 0,
+            "flipH": true,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              1154.463,
+              331.94
+            ],
+            "end": [
+              1026.819,
+              331.94
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 31",
+          "ppt": {
+            "start": [
+              7487425,
+              2419177
+            ],
+            "end": [
+              7487425,
+              2193943
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1026.819,
+              331.94
+            ],
+            "end": [
+              1026.819,
+              301.035
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        }
+      ]
+    },
+    {
+      "slide": 12,
+      "file": "ppt/slides/slide12.xml",
+      "groupCount": 4,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 30",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              2489995
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              341.657
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 31",
+          "ppt": {
+            "start": [
+              8418188,
+              2419177
+            ],
+            "end": [
+              4691974,
+              2419177
+            ],
+            "rotation": 0,
+            "flipH": true,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              1154.463,
+              331.94
+            ],
+            "end": [
+              643.453,
+              331.94
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 32",
+          "ppt": {
+            "start": [
+              4691974,
+              2419177
+            ],
+            "end": [
+              4691974,
+              2193943
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              643.453,
+              331.94
+            ],
+            "end": [
+              643.453,
+              301.035
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        }
+      ]
+    },
+    {
+      "slide": 13,
+      "file": "ppt/slides/slide13.xml",
+      "groupCount": 4,
+      "redConnectors": [
+        {
+          "connectorIndex": 0,
+          "name": "直線接點 30",
+          "ppt": {
+            "start": [
+              8418188,
+              5365323
+            ],
+            "end": [
+              8418188,
+              2489995
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              1154.463,
+              736.187
+            ],
+            "end": [
+              1154.463,
+              341.657
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 1,
+          "name": "直線接點 31",
+          "ppt": {
+            "start": [
+              8418188,
+              2419177
+            ],
+            "end": [
+              1987794,
+              2419177
+            ],
+            "rotation": 0,
+            "flipH": true,
+            "flipV": false
+          },
+          "map": {
+            "start": [
+              1154.463,
+              331.94
+            ],
+            "end": [
+              272.604,
+              331.94
+            ]
+          },
+          "hasDirectionMarker": false,
+          "manualReviewRequired": false
+        },
+        {
+          "connectorIndex": 2,
+          "name": "直線接點 32",
+          "ppt": {
+            "start": [
+              1987794,
+              2432117
+            ],
+            "end": [
+              1987794,
+              2206883
+            ],
+            "rotation": 0,
+            "flipH": false,
+            "flipV": true
+          },
+          "map": {
+            "start": [
+              272.604,
+              333.716
+            ],
+            "end": [
+              272.604,
+              302.811
+            ]
+          },
+          "hasDirectionMarker": true,
+          "manualReviewRequired": false
+        }
+      ]
+    }
+  ]
+}

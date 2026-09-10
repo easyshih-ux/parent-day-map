@@ -1,0 +1,25 @@
+# Dependencies and generated output
+node_modules/
+dist/
+.pnpm-store/
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Firebase / Google service-account credentials
+serviceAccountKey.json
+service-account*.json
+firebase-adminsdk-*.json
+*.pem
+*.key
+
+# Local Office lock files and superseded source deck
+~$*.pptx
+surce/campus-map-source.pptx
+
+# Local tooling
+.DS_Store
+*.local
