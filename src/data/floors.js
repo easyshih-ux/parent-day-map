@@ -5,11 +5,11 @@ const mapBaseUrl = import.meta.env?.BASE_URL || '/'
 export const getMapImageUrl = (filename) => `${mapBaseUrl}maps/${filename}`
 
 export const floors = Object.freeze([
-  { id: '1F', label: '1 樓', image: getMapImageUrl('floor-1.webp'), width: 1672, height: 941, order: 1 },
-  { id: '2F', label: '2 樓', image: getMapImageUrl('floor-2.webp'), width: 1672, height: 941, order: 2 },
-  { id: '3F', label: '3 樓', image: getMapImageUrl('floor-3.webp'), width: 1672, height: 941, order: 3 },
-  { id: '4F', label: '4 樓', image: getMapImageUrl('floor-4.webp'), width: 1672, height: 941, order: 4 },
-  { id: '5F', label: '5 樓', image: getMapImageUrl('floor-5.webp'), width: 1672, height: 941, order: 5 },
+  { id: '1F', label: '1 樓', image: getMapImageUrl('floor-1-base.png'), width: 1672, height: 941, order: 1 },
+  { id: '2F', label: '2 樓', image: getMapImageUrl('floor-2-base.png'), width: 1672, height: 941, order: 2 },
+  { id: '3F', label: '3 樓', image: getMapImageUrl('floor-3-base.png'), width: 1672, height: 941, order: 3 },
+  { id: '4F', label: '4 樓', image: getMapImageUrl('floor-4-base.png'), width: 1672, height: 941, order: 4 },
+  { id: '5F', label: '5 樓', image: getMapImageUrl('floor-5-base.png'), width: 1672, height: 941, order: 5 },
 ])
 
 export const floorById = Object.freeze(Object.fromEntries(floors.map((floor) => [floor.id, floor])))

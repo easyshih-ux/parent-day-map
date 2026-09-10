@@ -9,6 +9,7 @@
     "validate:routes": "node tools/validate-route-data.js",
     "validate:ppt-routes": "node tools/validate-ppt-transcription.js",
     "validate:highlights": "node tools/validate-highlight-data.js",
+    "validate:classrooms": "node tools/validate-classroom-migration.js",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -30,6 +30,7 @@ button, input { font: inherit; }
 .map-canvas img { display: block; object-fit: contain; }
 .map-loading { position: absolute; inset: auto 12px 12px auto; z-index: 2; padding: 4px 8px; border-radius: 999px; background: #fffdf0e6; color: #53625e; font-size: .78rem; }
 .route-overlay { pointer-events: none; }
+.class-label-overlay { fill: #18262a; font-family: system-ui, -apple-system, "Microsoft JhengHei", sans-serif; font-weight: 700; paint-order: stroke; stroke: #fffdf9; stroke-linejoin: round; stroke-width: 2px; }
 .route-line { fill: none; stroke: var(--navigation-route-color); stroke-linecap: round; stroke-linejoin: round; stroke-width: 11; opacity: .6; }
 .route-turn-hint { fill: none; stroke: var(--navigation-route-color); stroke-dasharray: 12 10; stroke-linecap: round; stroke-width: 11; opacity: .6; }
 .entrance-marker { fill: var(--navigation-route-color); fill-opacity: .7; stroke: var(--navigation-route-color); stroke-opacity: .72; stroke-width: 3; stroke-linejoin: round; }
