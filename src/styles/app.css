@@ -88,4 +88,5 @@ marker path { fill: #167292; }
 .calibration-actions button:disabled, .calibration-export button:disabled { cursor: not-allowed; opacity: .5; }
 .calibration-export { margin-top: 18px; }
 .calibration-export .clear-calibration { border-color: #b86649; color: #91452a; }
-@media (max-width: 560px) { .parent-navigation { padding-top: 12px; } .navigation-header { align-items: center; } .reset-button { max-width: 108px; min-height: 44px; } .map-viewport { border-radius: 8px; } .class-search input::placeholder { font-size: 20px; letter-spacing: .01em; } }
+@media (max-width: 560px) { .parent-navigation { padding-top: 12px; } .navigation-header { align-items: center; } .reset-button { max-width: 108px; min-height: 44px; } .map-viewport { border-radius: 8px; } }
+@media (max-width: 430px) { .home-card { padding: 20px; } .class-search input { width: 100%; min-width: 0; box-sizing: border-box; padding-inline: 12px; } .class-search input::placeholder { font-size: clamp(16px, 5vw, 22px); letter-spacing: 0; } }
