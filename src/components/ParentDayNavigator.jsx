@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import CampusMap from './CampusMap'
 import { findRouteIdForClass } from '../data/classRouteMap'
 import { destinationById } from '../data/destinations'
@@ -19,6 +19,9 @@ export default function ParentDayNavigator() {
   const [input, setInput] = useState('')
   const [message, setMessage] = useState('')
   const [navigation, setNavigation] = useState(null)
+  const [isFullscreen, setIsFullscreen] = useState(false)
+  const [isFullscreenSupported, setIsFullscreenSupported] = useState(false)
+  const navigationRootRef = useRef(null)
 
   function startNavigation(event) {
     event.preventDefault()
@@ -49,6 +52,29 @@ export default function ParentDayNavigator() {
     preloadImage.src = floorById[destinationFloorId].image
   }, [navigation])
 
+  useEffect(() => {
+    function updateFullscreenState() {
+      setIsFullscreen(document.fullscreenElement === navigationRootRef.current)
+      setIsFullscreenSupported(Boolean(document.fullscreenEnabled && navigationRootRef.current?.requestFullscreen))
+    }
+
+    updateFullscreenState()
+    document.addEventListener('fullscreenchange', updateFullscreenState)
+    return () => document.removeEventListener('fullscreenchange', updateFullscreenState)
+  }, [navigation])
+
+  async function toggleFullscreen() {
+    const root = navigationRootRef.current
+    if (!root || !document.fullscreenEnabled || !root.requestFullscreen) return
+
+    try {
+      if (document.fullscreenElement === root) await document.exitFullscreen()
+      else await root.requestFullscreen()
+    } catch {
+      // Fullscreen is an optional browser enhancement; navigation remains available.
+    }
+  }
+
   if (!navigation) return <main className="parent-home"><section className="home-card" aria-labelledby="home-title"><p className="eyebrow">新北市義學國民中學</p><h1 id="home-title">家長日校園導航</h1><p className="home-copy">輸入班級，立即查看前往路線</p><form className="class-search" onSubmit={startNavigation}><label htmlFor="class-number">請輸入您要前往的班級</label><input autoComplete="off" id="class-number" inputMode="numeric" onChange={(event) => setInput(event.target.value)} placeholder="例如：703、811、901" type="text" value={input} /><button type="submit">開始導航</button></form>{message && <p aria-live="polite" className="search-message">{message}</p>}</section></main>
 
   const route = routes.find((item) => item.id === navigation.routeId)
@@ -72,5 +98,5 @@ export default function ParentDayNavigator() {
 
   const transitionTitle = { stairs: '樓梯導航', 'spiral-stairs': '旋轉樓梯導航', elevator: '電梯導航' }[transition?.type]
 
-  return <main className="parent-navigation"><header className="navigation-header"><div><p className="eyebrow">家長日校園導航</p><h1>前往 {destination.displayName} 班</h1><p className="navigation-origin"><span>{routeSummary.origin}</span>{routeSummary.transition && <><span aria-hidden="true"> → </span><strong>{routeSummary.transition}</strong></>}</p></div><button className="reset-button" onClick={resetNavigation} type="button">重新搜尋班級</button></header><section className="navigation-stage" aria-label={`${floor.label} 導航`}><div className="floor-status">目前：{floor.label}</div><CampusMap elevatorTransitionMarker={elevatorTransitionMarker} entranceMarker={entranceMarker} floorId={floor.id} hideRouteSegments={hideRouteSegments} horizontalOnlyTerminal={horizontalOnlyTerminal} image={mapImage} presentationSegments={elevatorStraightPresentation} routeFloor={routeFloor} spiralTransitionMarker={spiralTransitionMarker} targetHighlight={targetHighlight} transitionMarker={transitionMarker} /></section>{transition ? <section className="transition-card" aria-live="polite"><span>{transitionTitle}</span><p>{transition.label}</p><button onClick={() => setNavigation((current) => ({ ...current, floorIndex: current.floorIndex + 1 }))} type="button">我已到 {floorById[transition.toFloorId].label}</button></section> : <section className="arrival-message"><p>已抵達 {destination.displayName} 班所在區域</p><button onClick={resetNavigation} type="button">重新搜尋班級</button></section>}</main>
+  return <main className="parent-navigation" ref={navigationRootRef}><header className="navigation-header"><div><p className="eyebrow">家長日校園導航</p><h1>前往 {destination.displayName} 班</h1><p className="navigation-origin"><span>{routeSummary.origin}</span>{routeSummary.transition && <><span aria-hidden="true"> → </span><strong>{routeSummary.transition}</strong></>}</p></div><button className="reset-button" onClick={resetNavigation} type="button">重新搜尋班級</button></header><section className="navigation-stage" aria-label={`${floor.label} 導航`}><div className="floor-status">目前：{floor.label}</div><CampusMap elevatorTransitionMarker={elevatorTransitionMarker} entranceMarker={entranceMarker} floorId={floor.id} hideRouteSegments={hideRouteSegments} horizontalOnlyTerminal={horizontalOnlyTerminal} image={mapImage} presentationSegments={elevatorStraightPresentation} routeFloor={routeFloor} spiralTransitionMarker={spiralTransitionMarker} targetHighlight={targetHighlight} transitionMarker={transitionMarker} />{isFullscreenSupported && <button aria-label={isFullscreen ? '退出全螢幕查看' : '全螢幕查看'} className="fullscreen-toggle" onClick={toggleFullscreen} type="button">{isFullscreen ? '退出全螢幕' : '全螢幕查看'}</button>}</section>{transition ? <section className="transition-card" aria-live="polite"><span>{transitionTitle}</span><p>{transition.label}</p><button onClick={() => setNavigation((current) => ({ ...current, floorIndex: current.floorIndex + 1 }))} type="button">我已到 {floorById[transition.toFloorId].label}</button></section> : <section className="arrival-message"><p>已抵達 {destination.displayName} 班所在區域</p><button onClick={resetNavigation} type="button">重新搜尋班級</button></section>}</main>
 }
