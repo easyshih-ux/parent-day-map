@@ -2,7 +2,7 @@ import { useState } from 'react'
 import CampusMap from './CampusMap'
 import { findRouteIdForClass } from '../data/classRouteMap'
 import { destinationById } from '../data/destinations'
-import { floorById } from '../data/floors'
+import { floorById, getMapImageUrl } from '../data/floors'
 import { routes } from '../data/routes'
 import { getEntranceMarker } from '../data/entranceMarkers'
 import { getTransitionMarker } from '../data/transitionMarkers'
@@ -49,7 +49,7 @@ export default function ParentDayNavigator() {
   const transitionMarker = getTransitionMarker(route, routeFloor)
   const elevatorTransitionMarker = getElevatorTransitionMarker(route, routeFloor)
   const elevatorStraightPresentation = getElevatorStraightPresentation(elevatorTransitionMarker)
-  const mapImage = elevatorTransitionMarker ? '/maps/floor-1b.png' : floor.image
+  const mapImage = elevatorTransitionMarker ? getMapImageUrl('floor-1b.png') : floor.image
   const horizontalOnlyTerminal = getElevatorDestinationPresentation(route, routeFloor)
   const hideRouteSegments = isMarkerOnlyArrivalFloor(route, floor.id)
   const spiralTransitionMarker = getSpiralTransitionMarker(route, routeFloor)
