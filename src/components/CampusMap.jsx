@@ -5,10 +5,14 @@ import RouteOverlay from './RouteOverlay'
 export default function CampusMap({ floorId, routeFloor, entranceMarker, transitionMarker, elevatorTransitionMarker, spiralTransitionMarker, presentationSegments, image, horizontalOnlyTerminal, hideRouteSegments, targetHighlight }) {
   const floor = floorById[floorId]
   const [view, setView] = useState({ scale: 1, x: 0, y: 0 })
+  const [loadedImageSource, setLoadedImageSource] = useState(null)
   const pointers = useRef(new Map())
   const gesture = useRef(null)
 
   if (!floor) return null
+
+  const imageSource = image ?? floor.image
+  const isMapLoaded = loadedImageSource === imageSource
 
   function pointerDown(event) {
     event.currentTarget.setPointerCapture(event.pointerId)
@@ -39,11 +43,12 @@ export default function CampusMap({ floorId, routeFloor, entranceMarker, transit
 
   return (
     <section className="campus-map" aria-label={`${floor.label} 校園地圖`}>
-      <div className="map-viewport" onPointerDown={pointerDown} onPointerMove={pointerMove} onPointerUp={pointerUp} onPointerCancel={pointerUp}>
+      <div aria-busy={!isMapLoaded} className="map-viewport" onPointerDown={pointerDown} onPointerMove={pointerMove} onPointerUp={pointerUp} onPointerCancel={pointerUp}>
         <div className="map-canvas" style={{ transform: `translate(${view.x}px, ${view.y}px) scale(${view.scale})` }}>
-          <img alt={`${floor.label} 正式校園平面圖`} src={image ?? floor.image} />
-          <RouteOverlay elevatorTransitionMarker={elevatorTransitionMarker} entranceMarker={entranceMarker} height={floor.height} hideRouteSegments={hideRouteSegments} horizontalOnlyTerminal={horizontalOnlyTerminal} presentationSegments={presentationSegments} routeFloor={routeFloor} spiralTransitionMarker={spiralTransitionMarker} targetHighlight={targetHighlight} transitionMarker={transitionMarker} width={floor.width} />
+          <img alt={`${floor.label} 正式校園平面圖`} key={imageSource} onLoad={() => setLoadedImageSource(imageSource)} src={imageSource} />
+          <RouteOverlay elevatorTransitionMarker={elevatorTransitionMarker} entranceMarker={entranceMarker} height={floor.height} hideRouteSegments={hideRouteSegments} horizontalOnlyTerminal={horizontalOnlyTerminal} presentationSegments={presentationSegments} routeFloor={routeFloor} spiralTransitionMarker={spiralTransitionMarker} targetHighlight={isMapLoaded ? targetHighlight : null} transitionMarker={transitionMarker} width={floor.width} />
         </div>
+        {!isMapLoaded && <span className="map-loading" role="status">地圖載入中…</span>}
         {view.scale > 1 && <button className="map-reset" onClick={() => setView({ scale: 1, x: 0, y: 0 })} type="button">恢復原始比例</button>}
       </div>
       <p className="map-help">可用兩指放大地圖，拖曳查看細節</p>
