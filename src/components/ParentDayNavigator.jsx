@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CampusMap from './CampusMap'
 import { findRouteIdForClass } from '../data/classRouteMap'
 import { destinationById } from '../data/destinations'
@@ -38,6 +38,17 @@ export default function ParentDayNavigator() {
     setNavigation(null)
   }
 
+  useEffect(() => {
+    if (!navigation || navigation.floorIndex !== 0) return
+
+    const route = routes.find((item) => item.id === navigation.routeId)
+    const destinationFloorId = route?.floors.at(-1)?.floorId
+    if (!route || route.floors[0]?.floorId !== '1F' || destinationFloorId === '1F') return
+
+    const preloadImage = new Image()
+    preloadImage.src = floorById[destinationFloorId].image
+  }, [navigation])
+
   if (!navigation) return <main className="parent-home"><section className="home-card" aria-labelledby="home-title"><p className="eyebrow">校園家長日</p><h1 id="home-title">家長日校園導航</h1><p className="home-copy">輸入班級，立即查看前往路線</p><form className="class-search" onSubmit={startNavigation}><label htmlFor="class-number">請輸入您要前往的班級</label><input autoComplete="off" id="class-number" inputMode="numeric" onChange={(event) => setInput(event.target.value)} placeholder="例如：703、811、916" type="text" value={input} /><button type="submit">開始導航</button></form>{message && <p aria-live="polite" className="search-message">{message}</p>}</section></main>
 
   const route = routes.find((item) => item.id === navigation.routeId)
@@ -49,7 +60,7 @@ export default function ParentDayNavigator() {
   const transitionMarker = getTransitionMarker(route, routeFloor)
   const elevatorTransitionMarker = getElevatorTransitionMarker(route, routeFloor)
   const elevatorStraightPresentation = getElevatorStraightPresentation(elevatorTransitionMarker)
-  const mapImage = elevatorTransitionMarker ? getMapImageUrl('floor-1b.png') : floor.image
+  const mapImage = elevatorTransitionMarker ? getMapImageUrl('floor-1b.webp') : floor.image
   const horizontalOnlyTerminal = getElevatorDestinationPresentation(route, routeFloor)
   const hideRouteSegments = isMarkerOnlyArrivalFloor(route, floor.id)
   const spiralTransitionMarker = getSpiralTransitionMarker(route, routeFloor)
