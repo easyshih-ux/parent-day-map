@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import { activeAcademicYear } from '../src/data/activeAcademicYear.js'
 import { academicYear115 } from '../src/data/academicYears/115.js'
+import { academicYear116 } from '../src/data/academicYears/116.js'
+import { validateAcademicYearAssignments } from '../src/data/academicYearValidation.js'
 import { getActiveAcademicYearConfig, resolveClassroom } from '../src/data/classroomResolver.js'
 import { classHighlightPositions } from '../src/data/classHighlightPositions.js'
 import { classRouteMap } from '../src/data/classRouteMap.js'
@@ -16,7 +18,17 @@ const assignmentEntries = Object.entries(academicYear115.assignments)
 const roomIds = new Set()
 
 if (!getActiveAcademicYearConfig() || activeAcademicYear !== '115') errors.push('activeAcademicYear does not resolve to 115')
-if (assignmentEntries.length !== 50) errors.push(`115 assignments: expected 50, received ${assignmentEntries.length}`)
+function validateAcademicYear(academicYear) {
+  const validation = validateAcademicYearAssignments(academicYear.assignments, classrooms.map((classroom) => classroom.displayName))
+  if (validation.total !== 50) errors.push(`${academicYear.academicYear}: expected 50 classes, received ${validation.total}`)
+  if (validation.missing.length) errors.push(`${academicYear.academicYear}: missing assignments for ${validation.missing.join(', ')}`)
+  if (validation.invalid.length) errors.push(`${academicYear.academicYear}: invalid roomIds for ${validation.invalid.join(', ')}`)
+  for (const duplicate of validation.duplicates) errors.push(`${academicYear.academicYear}: ${duplicate.roomId} is assigned to ${duplicate.classNumbers.join(', ')}`)
+  if (validation.incompleteRooms.length) errors.push(`${academicYear.academicYear}: incomplete rooms ${validation.incompleteRooms.join(', ')}`)
+}
+
+validateAcademicYear(academicYear115)
+validateAcademicYear(academicYear116)
 
 for (const room of rooms) {
   if (roomIds.has(room.id)) errors.push(`${room.id}: duplicate roomId`)
@@ -52,4 +64,4 @@ if (errors.length) {
   process.exit(1)
 }
 
-console.log(`Validated ${rooms.length} fixed rooms and ${assignmentEntries.length} academic-year assignments; all 50 classes match legacy floor, route, and highlight data.`)
+console.log(`Validated ${rooms.length} fixed rooms plus 115/116 academic-year configurations; 115's 50 classes match legacy floor, route, and highlight data.`)
