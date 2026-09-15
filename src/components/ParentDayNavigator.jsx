@@ -14,6 +14,7 @@ import { getPreviewAcademicYear } from '../data/academicYearPreview'
 import { specialDestinationById } from '../data/specialDestinations'
 
 const normalizeClassNumber = (value) => value.trim().replace(/[０-９]/g, (digit) => String.fromCharCode(digit.charCodeAt(0) - 0xfee0))
+const getHomeImageUrl = (filename) => `${import.meta.env.BASE_URL}images/${filename}`
 
 export default function ParentDayNavigator() {
   const [input, setInput] = useState('')
@@ -58,7 +59,32 @@ export default function ParentDayNavigator() {
     preloadImage.src = floorById[destinationFloorId].image
   }, [navigation])
 
-  if (!navigation) return <main className="parent-home"><div className="parent-home-content">{previewAcademicYear && <section className="academic-preview-banner academic-preview-banner-home" aria-label="開發預覽模式"><strong>開發預覽：{previewAcademicYear} 學年度</strong><button onClick={exitAcademicYearPreview} type="button">返回正式 115</button></section>}<section className="home-card" aria-labelledby="home-title"><p className="eyebrow">新北市義學國民中學</p><h1 id="home-title">家長日校園導航</h1><p className="home-copy">輸入班級，立即查看前往路線</p><form className="class-search" onSubmit={startNavigation}><label htmlFor="class-number">請輸入您要前往的班級</label><input autoComplete="off" id="class-number" inputMode="numeric" onChange={(event) => setInput(event.target.value)} placeholder="例如：703、811、901" type="text" value={input} /><button type="submit">開始導航</button></form>{message && <p aria-live="polite" className="search-message">{message}</p>}<section className="special-destination-entry" aria-label="活動地點"><span>綜合座談</span><strong>B棟三樓</strong><button onClick={() => openSpecialDestination('general-forum')} type="button">查看位置</button></section></section></div><footer className="site-credit">made by Wen Yi</footer></main>
+  if (!navigation) return <main className="parent-home">
+    <picture aria-hidden="true" className="home-background"><source media="(max-width: 768px)" srcSet={getHomeImageUrl('parent-day-home-mobile.webp')} /><img alt="" src={getHomeImageUrl('parent-day-home-desktop.webp')} /></picture>
+    <div className="parent-home-content">
+      {previewAcademicYear && <section className="academic-preview-banner academic-preview-banner-home" aria-label="開發預覽模式"><strong>開發預覽：{previewAcademicYear} 學年度</strong><button onClick={exitAcademicYearPreview} type="button">返回正式 115</button></section>}
+      <header className="home-hero" aria-labelledby="home-title">
+        <p className="school-name">新北市立義學國民中學</p>
+        <h1 id="home-title">家長日校園導航</h1>
+        <p>輸入孩子的班級，立即查看前往教室的路線</p>
+      </header>
+      <section className="home-card" aria-label="班級搜尋">
+        <form className="class-search" onSubmit={startNavigation}>
+          <label htmlFor="class-number">請輸入您要前往的班級</label>
+          <div className="class-input-wrap"><input autoComplete="off" id="class-number" inputMode="numeric" onChange={(event) => setInput(event.target.value)} placeholder="例如：703、811、901" type="text" value={input} /></div>
+          <button type="submit">開始導航 <span aria-hidden="true">→</span></button>
+          <p>輸入班級後，將顯示前往教室的路線圖</p>
+        </form>
+        {message && <p aria-live="polite" className="search-message">{message}</p>}
+      </section>
+      <section className="special-destination-entry" aria-label="活動地點">
+        <div className="special-destination-icon" aria-hidden="true"><svg fill="none" viewBox="0 0 24 24"><path d="M20 10c0 5.4-8 11-8 11S4 15.4 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg></div>
+        <div className="special-destination-copy"><strong>綜合座談</strong><b>⌂　B棟三樓</b><span>班級家長日結束後，可由此查看座談位置</span></div>
+        <button onClick={() => openSpecialDestination('general-forum')} type="button">查看位置 <span aria-hidden="true">→</span></button>
+      </section>
+    </div>
+    <footer className="site-credit">made by Wen Yi</footer>
+  </main>
 
   const specialDestination = navigation.kind === 'special-destination' ? specialDestinationById[navigation.destinationId] : null
   if (specialDestination) {

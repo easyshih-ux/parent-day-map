@@ -5,20 +5,35 @@ body, #root { min-height: 100vh; min-height: 100dvh; }
 body { margin: 0; }
 button, input { font: inherit; }
 .eyebrow { margin: 0 0 5px; color: #286678; font-weight: 800; letter-spacing: .04em; }
-.parent-home { display: grid; grid-template-rows: 1fr auto; min-height: 100vh; min-height: 100dvh; place-items: center; padding: calc(20px + env(safe-area-inset-top, 0px)) max(14px, env(safe-area-inset-right, 0px)) calc(20px + env(safe-area-inset-bottom, 0px)) max(14px, env(safe-area-inset-left, 0px)); }
-.parent-home-content { display: grid; width: min(100%, 540px); gap: 12px; }
-.home-card { width: min(100%, 540px); padding: clamp(24px, 7vw, 44px); border: 1px solid #e6d8c5; border-radius: 20px; background: #fffdf9; box-shadow: 0 14px 38px #69472918; }
-.home-card h1 { margin: 0; font-size: clamp(1.7rem, 7vw, 2.5rem); line-height: 1.28; }
-.home-copy { margin: 12px 0 26px; color: #55666b; line-height: 1.6; }
-.class-search { display: grid; gap: 10px; }
-.class-search label { font-weight: 800; }
-.class-search input { width: 100%; min-height: 64px; border: 2px solid #9eb1b5; border-radius: 12px; padding: 0 16px; font-size: 1.3rem; letter-spacing: .04em; }
-.class-search input:focus { border-color: #286678; outline: 3px solid #c7e4ea; }
-.class-search button, .transition-card button { min-height: 58px; border: 0; border-radius: 12px; background: #286678; color: #fff; font-size: 1.15rem; font-weight: 800; }
-.special-destination-entry { display: grid; grid-template-columns: 1fr auto; gap: 3px 12px; margin-top: 22px; padding: 14px 0 0; border-top: 1px solid #e8ddd0; color: #55666b; }
-.special-destination-entry span { font-weight: 800; color: #32545d; }
-.special-destination-entry strong { color: #55666b; font-size: .92rem; font-weight: 700; text-align: right; }
-.special-destination-entry button { grid-column: 1 / -1; justify-self: start; min-height: 38px; border: 1px solid #8fa9b0; border-radius: 8px; padding: 0 12px; background: #fff; color: #32545d; font-size: .92rem; font-weight: 800; }
+.parent-home { position: relative; display: grid; grid-template-rows: 1fr auto; min-height: 100vh; min-height: 100dvh; overflow: hidden; place-items: center; padding: calc(34px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: #fffcf5; }
+.home-background { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.home-background img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.parent-home-content { position: relative; z-index: 1; display: grid; width: min(100%, 800px); gap: clamp(15px, 2.4vw, 22px); }
+.home-hero { padding: 2px 8px 6px; color: #16465e; text-align: center; }
+.school-name { margin: 0 0 10px; color: #174c66; font-size: clamp(.88rem, 2.1vw, 1.05rem); font-weight: 800; letter-spacing: .08em; }
+.home-hero h1 { margin: 0; color: #103f59; font-size: clamp(2.125rem, 4vw, 3.625rem); line-height: 1.2; letter-spacing: .045em; text-shadow: 0 1px 0 #ffffffc7; }
+.home-hero > p:last-child { margin: 14px 0 0; color: #315d70; font-size: clamp(1rem, 2.5vw, 1.25rem); font-weight: 700; line-height: 1.55; }
+.home-card { width: 100%; padding: clamp(22px, 4vw, 34px); border: 1px solid #ffffffb8; border-radius: 24px; background: rgb(255 255 255 / .88); box-shadow: 0 14px 32px #3156681c; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.class-search { display: grid; gap: 12px; min-width: 0; }
+.class-search label { color: #16465e; font-size: clamp(1.2rem, 3.6vw, 1.65rem); font-weight: 900; letter-spacing: .025em; }
+.class-input-wrap { min-height: 58px; border: 2px solid #a7b7c3; border-radius: 15px; padding-inline: 16px; background: rgb(255 255 255 / .82); }
+.class-search input { width: 100%; min-width: 0; height: 56px; border: 0; outline: 0; background: transparent; color: #183d50; font-size: clamp(1.15rem, 3.6vw, 1.45rem); font-weight: 700; letter-spacing: .04em; }
+.class-search input::placeholder { color: #8090a1; font-weight: 500; }
+.class-input-wrap:focus-within { border-color: #286678; box-shadow: 0 0 0 3px #c7e4ea; }
+.class-search button, .transition-card button { min-height: 58px; border: 0; border-radius: 16px; background: linear-gradient(110deg, #1b6578, #287f8f); box-shadow: 0 7px 15px #1c65762e; color: #fff; font-size: clamp(1.1rem, 3.7vw, 1.35rem); font-weight: 900; letter-spacing: .05em; }
+.class-search button:hover { filter: brightness(1.05); }
+.class-search button:active { transform: translateY(1px); }
+.class-search button span { margin-left: 8px; font-size: 1.2em; }
+.class-search > p { margin: -2px 0 0; color: #5f7380; font-size: .88rem; text-align: center; }
+.special-destination-entry { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; width: 100%; padding: clamp(18px, 3.2vw, 25px); border: 1px solid #f0cbc8; border-radius: 24px; background: rgb(255 247 245 / .9); box-shadow: 0 10px 22px #ad564113; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: #6e3541; }
+.special-destination-icon { display: grid; width: 48px; height: 48px; place-items: center; border-radius: 50%; background: #fae4e1; color: #9a2532; }
+.special-destination-icon svg { width: 26px; height: 26px; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.9; }
+.special-destination-copy { display: grid; gap: 3px; min-width: 0; }
+.special-destination-copy strong { color: #9a2532; font-size: clamp(1.12rem, 3.6vw, 1.45rem); font-weight: 900; }
+.special-destination-copy b { color: #593d43; font-size: clamp(.98rem, 3.1vw, 1.15rem); }
+.special-destination-copy span { color: #79646a; font-size: clamp(.78rem, 2.5vw, .94rem); line-height: 1.4; }
+.special-destination-entry button { min-height: 48px; border: 0; border-radius: 13px; padding: 0 17px; background: #f9dedd; color: #8f2732; font-size: clamp(.92rem, 3vw, 1.04rem); font-weight: 900; white-space: nowrap; }
+.special-destination-entry button:hover { background: #f6d2d1; }
 .search-message { margin: 18px 0 0; padding: 12px 14px; border-radius: 10px; background: #fff0e9; color: #9e3f1f; font-weight: 700; line-height: 1.55; }
 .site-credit { width: 100%; margin: 14px 0 0; color: #5e6b70; font-size: 10.5px; font-weight: 400; letter-spacing: .06em; line-height: 1.4; opacity: .36; text-align: center; }
 .academic-preview-banner { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 12px; padding: 10px 12px; border: 1px solid #ba7939; border-radius: 10px; background: #fff1d6; color: #704215; }
@@ -122,5 +137,5 @@ marker path { fill: var(--navigation-route-color); }
 .academic-config-heading { background: #f1f7f7; color: #35535b; font-size: .88rem; font-weight: 900; }
 .academic-config-row.has-error { background: #fff4ed; }
 .academic-config-row code { overflow-wrap: anywhere; font-size: .8rem; }
-@media (max-width: 560px) { .parent-navigation { padding-top: calc(12px + env(safe-area-inset-top, 0px)); } .navigation-header { align-items: center; } .reset-button { max-width: 108px; min-height: 44px; } .map-viewport { border-radius: 8px; } }
-@media (max-width: 430px) { .home-card { padding: 20px; } .class-search input { width: 100%; min-width: 0; box-sizing: border-box; padding-inline: 12px; } .class-search input::placeholder { font-size: clamp(16px, 5vw, 22px); letter-spacing: 0; } }
+@media (max-width: 560px) { .parent-navigation { padding-top: calc(12px + env(safe-area-inset-top, 0px)); } .navigation-header { align-items: center; } .reset-button { max-width: 108px; min-height: 44px; } .map-viewport { border-radius: 8px; } .parent-home { place-items: start center; } .special-destination-entry { grid-template-columns: auto 1fr; } .special-destination-entry button { grid-column: 1 / -1; width: 100%; } }
+@media (max-width: 430px) { .parent-home { padding-inline: 12px; } .home-card { padding: 20px; border-radius: 20px; } .class-input-wrap { min-height: 56px; padding-inline: 12px; } .class-search input { width: 100%; min-width: 0; height: 52px; box-sizing: border-box; } .class-search input::placeholder { font-size: clamp(16px, 5vw, 22px); letter-spacing: 0; } .class-search button { min-height: 54px; } .home-hero h1 { font-size: clamp(2.125rem, 9.5vw, 2.5rem); } .home-hero > p:last-child { margin-top: 12px; } }
