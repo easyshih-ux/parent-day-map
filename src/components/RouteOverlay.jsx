@@ -29,7 +29,7 @@ export default function RouteOverlay({ width, height, routeFloor, entranceMarker
       {transitionMarker && <path aria-label={`${transitionMarker.building} 棟樓梯提示`} className="transition-marker" d={`M ${transitionMarker.x} ${transitionMarker.y - entranceMarkerPresentation.height} L ${transitionMarker.x - entranceMarkerPresentation.halfWidth} ${transitionMarker.y} L ${transitionMarker.x + entranceMarkerPresentation.halfWidth} ${transitionMarker.y} Z`} />}
       {elevatorTransitionMarker && <path aria-label="電梯提示" className="elevator-transition-marker" d={`M ${elevatorTransitionMarker.x} ${elevatorTransitionMarker.y - entranceMarkerPresentation.height} L ${elevatorTransitionMarker.x - entranceMarkerPresentation.halfWidth} ${elevatorTransitionMarker.y} L ${elevatorTransitionMarker.x + entranceMarkerPresentation.halfWidth} ${elevatorTransitionMarker.y} Z`} />}
       {spiralTransitionMarker && <path aria-label="旋轉樓梯提示" className="spiral-transition-marker" d={`M ${spiralTransitionMarker.x - entranceMarkerPresentation.halfWidth} ${spiralTransitionMarker.y - entranceMarkerPresentation.height} L ${spiralTransitionMarker.x + entranceMarkerPresentation.halfWidth} ${spiralTransitionMarker.y - entranceMarkerPresentation.height} L ${spiralTransitionMarker.x} ${spiralTransitionMarker.y} Z`} />}
-      {targetHighlight && <TargetClassHighlight className="target-class-highlight target-class-highlight-formal" {...targetHighlight} />}
+      {targetHighlight && <TargetClassHighlight className="target-class-highlight target-class-highlight-formal" visualOffsetY={-4} {...targetHighlight} />}
       {specialDestination && <SpecialDestinationMarker destination={specialDestination} />}
       <ClassLabelOverlay classrooms={classLabels} />
     </svg>
