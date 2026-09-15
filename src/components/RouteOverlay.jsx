@@ -3,11 +3,11 @@ import { entranceMarkerPresentation } from '../data/entranceMarkers'
 import { presentHorizontalOnlyTerminal, presentRouteSegments, trimRouteForSpiralTransitionMarker, trimRouteForTransitionMarker } from '../utils/terminalPresentation'
 import TargetClassHighlight from './TargetClassHighlight'
 import ClassLabelOverlay from './ClassLabelOverlay'
+import SpecialDestinationMarker from './SpecialDestinationMarker'
 
-export default function RouteOverlay({ width, height, routeFloor, entranceMarker, transitionMarker, elevatorTransitionMarker, spiralTransitionMarker, presentationSegments, horizontalOnlyTerminal = false, hideRouteSegments = false, targetHighlight, classLabels = [] }) {
+export default function RouteOverlay({ width, height, routeFloor, entranceMarker, transitionMarker, elevatorTransitionMarker, spiralTransitionMarker, presentationSegments, horizontalOnlyTerminal = false, hideRouteSegments = false, targetHighlight, specialDestination, classLabels = [] }) {
   const sourceSegments = presentationSegments ?? routeFloor?.segments
-  if (!sourceSegments?.length) return null
-  const presentedSegments = horizontalOnlyTerminal ? presentHorizontalOnlyTerminal(sourceSegments, entranceMarker, horizontalOnlyTerminal.elevatorIconBounds) : presentRouteSegments(sourceSegments, entranceMarker)
+  const presentedSegments = sourceSegments?.length ? (horizontalOnlyTerminal ? presentHorizontalOnlyTerminal(sourceSegments, entranceMarker, horizontalOnlyTerminal.elevatorIconBounds) : presentRouteSegments(sourceSegments, entranceMarker)) : []
   const displaySegments = hideRouteSegments ? [] : trimRouteForSpiralTransitionMarker(trimRouteForTransitionMarker(trimRouteForTransitionMarker(presentedSegments, transitionMarker), elevatorTransitionMarker), spiralTransitionMarker)
 
   return (
@@ -30,6 +30,7 @@ export default function RouteOverlay({ width, height, routeFloor, entranceMarker
       {elevatorTransitionMarker && <path aria-label="電梯提示" className="elevator-transition-marker" d={`M ${elevatorTransitionMarker.x} ${elevatorTransitionMarker.y - entranceMarkerPresentation.height} L ${elevatorTransitionMarker.x - entranceMarkerPresentation.halfWidth} ${elevatorTransitionMarker.y} L ${elevatorTransitionMarker.x + entranceMarkerPresentation.halfWidth} ${elevatorTransitionMarker.y} Z`} />}
       {spiralTransitionMarker && <path aria-label="旋轉樓梯提示" className="spiral-transition-marker" d={`M ${spiralTransitionMarker.x - entranceMarkerPresentation.halfWidth} ${spiralTransitionMarker.y - entranceMarkerPresentation.height} L ${spiralTransitionMarker.x + entranceMarkerPresentation.halfWidth} ${spiralTransitionMarker.y - entranceMarkerPresentation.height} L ${spiralTransitionMarker.x} ${spiralTransitionMarker.y} Z`} />}
       {targetHighlight && <TargetClassHighlight className="target-class-highlight target-class-highlight-formal" {...targetHighlight} />}
+      {specialDestination && <SpecialDestinationMarker destination={specialDestination} />}
       <ClassLabelOverlay classrooms={classLabels} />
     </svg>
   )
